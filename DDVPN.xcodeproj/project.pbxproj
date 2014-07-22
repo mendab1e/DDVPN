@@ -18,6 +18,7 @@
 		D90231FF197EDFCA00E95F3A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D90231DE197EDFCA00E95F3A /* Cocoa.framework */; };
 		D9023207197EDFCA00E95F3A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9023205197EDFCA00E95F3A /* InfoPlist.strings */; };
 		D9023209197EDFCA00E95F3A /* DDVPNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9023208197EDFCA00E95F3A /* DDVPNTests.m */; };
+		D9023214197EF91200E95F3A /* DDConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D9023213197EF91200E95F3A /* DDConnection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		D9023204197EDFCA00E95F3A /* DDVPNTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DDVPNTests-Info.plist"; sourceTree = "<group>"; };
 		D9023206197EDFCA00E95F3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D9023208197EDFCA00E95F3A /* DDVPNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDVPNTests.m; sourceTree = "<group>"; };
+		D9023212197EF91200E95F3A /* DDConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDConnection.h; sourceTree = "<group>"; };
+		D9023213197EF91200E95F3A /* DDConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDConnection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				D90231F3197EDFCA00E95F3A /* MainMenu.xib */,
 				D90231F6197EDFCA00E95F3A /* Images.xcassets */,
 				D90231E5197EDFCA00E95F3A /* Supporting Files */,
+				D9023212197EF91200E95F3A /* DDConnection.h */,
+				D9023213197EF91200E95F3A /* DDConnection.m */,
 			);
 			path = DDVPN;
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 			files = (
 				D90231F2197EDFCA00E95F3A /* AppDelegate.m in Sources */,
 				D90231EB197EDFCA00E95F3A /* main.m in Sources */,
+				D9023214197EF91200E95F3A /* DDConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

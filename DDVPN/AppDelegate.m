@@ -10,19 +10,25 @@
 
 @implementation AppDelegate
 
+@synthesize titleTextBox;
+@synthesize ipTextBox;
+
 - (void)awakeFromNib {
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     
-    NSBundle *bundle = [NSBundle mainBundle];
     [statusItem setTitle:@"VPN"];
     [statusItem setMenu:menu];
     
 }
 
-
-
 - (IBAction)stopVPN:(id)sender {
     NSLog(@"Stopping VNP");
 }
+
+- (IBAction)createConnection:(id)sender {
+    NSString *ip = ipTextBox.stringValue;
+    NSLog(@"Connecting ip: %@", ip);
+}
+
 
 @end
