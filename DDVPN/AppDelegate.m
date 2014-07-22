@@ -10,9 +10,19 @@
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-    // Insert code here to initialize your application
+- (void)awakeFromNib {
+    statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    
+    NSBundle *bundle = [NSBundle mainBundle];
+    [statusItem setTitle:@"VPN"];
+    [statusItem setMenu:menu];
+    
+}
+
+
+
+- (IBAction)stopVPN:(id)sender {
+    NSLog(@"Stopping VNP");
 }
 
 @end

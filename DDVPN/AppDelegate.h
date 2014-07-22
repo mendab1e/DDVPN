@@ -8,7 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
+    IBOutlet NSMenu *menu;
+    NSStatusItem *statusItem;
+}
+
+- (IBAction)stopVPN:(id)sender;
 
 @property (assign) IBOutlet NSWindow *window;
 
