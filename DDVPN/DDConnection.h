@@ -13,6 +13,7 @@
 - (NSString *)title;
 - (NSString *)ip;
 
-- (id) initWithTitleString: (NSString *) title andIpString:(NSString*) ip;
+- (id) initWithTitleString: (NSString *) title
+               andIpString: (NSString*) ip;
 
 @end

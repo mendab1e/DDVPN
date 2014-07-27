@@ -19,6 +19,7 @@
 		D9023207197EDFCA00E95F3A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9023205197EDFCA00E95F3A /* InfoPlist.strings */; };
 		D9023209197EDFCA00E95F3A /* DDVPNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9023208197EDFCA00E95F3A /* DDVPNTests.m */; };
 		D9023214197EF91200E95F3A /* DDConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D9023213197EF91200E95F3A /* DDConnection.m */; };
+		D907A5B41985267800867EEE /* RouterConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = D907A5B31985267800867EEE /* RouterConnector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		D9023208197EDFCA00E95F3A /* DDVPNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDVPNTests.m; sourceTree = "<group>"; };
 		D9023212197EF91200E95F3A /* DDConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDConnection.h; sourceTree = "<group>"; };
 		D9023213197EF91200E95F3A /* DDConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDConnection.m; sourceTree = "<group>"; };
+		D907A5B21985267800867EEE /* RouterConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouterConnector.h; sourceTree = "<group>"; };
+		D907A5B31985267800867EEE /* RouterConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouterConnector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +126,8 @@
 				D90231F3197EDFCA00E95F3A /* MainMenu.xib */,
 				D90231F6197EDFCA00E95F3A /* Images.xcassets */,
 				D90231E5197EDFCA00E95F3A /* Supporting Files */,
-				D9023212197EF91200E95F3A /* DDConnection.h */,
-				D9023213197EF91200E95F3A /* DDConnection.m */,
+				D907A5B11985255800867EEE /* DDConnection */,
+				D907A5B51985267E00867EEE /* RouterConnector */,
 			);
 			path = DDVPN;
 			sourceTree = "<group>";
@@ -157,6 +160,24 @@
 				D9023205197EDFCA00E95F3A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D907A5B11985255800867EEE /* DDConnection */ = {
+			isa = PBXGroup;
+			children = (
+				D9023212197EF91200E95F3A /* DDConnection.h */,
+				D9023213197EF91200E95F3A /* DDConnection.m */,
+			);
+			name = DDConnection;
+			sourceTree = "<group>";
+		};
+		D907A5B51985267E00867EEE /* RouterConnector */ = {
+			isa = PBXGroup;
+			children = (
+				D907A5B21985267800867EEE /* RouterConnector.h */,
+				D907A5B31985267800867EEE /* RouterConnector.m */,
+			);
+			name = RouterConnector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D907A5B41985267800867EEE /* RouterConnector.m in Sources */,
 				D90231F2197EDFCA00E95F3A /* AppDelegate.m in Sources */,
 				D90231EB197EDFCA00E95F3A /* main.m in Sources */,
 				D9023214197EF91200E95F3A /* DDConnection.m in Sources */,
@@ -470,6 +492,7 @@
 				D902320E197EDFCA00E95F3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D902320F197EDFCA00E95F3A /* Build configuration list for PBXNativeTarget "DDVPNTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +501,7 @@
 				D9023211197EDFCA00E95F3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

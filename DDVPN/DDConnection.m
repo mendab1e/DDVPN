@@ -18,16 +18,13 @@
 
 @implementation DDConnection
 
-- (id) initWithTitleString: (NSString *) title andIpString:(NSString*) ip {
+- (id) initWithTitleString: (NSString *) title
+               andIpString: (NSString*) ip {    
     self = [super init];
     self.title = title;
     self.ip = ip;
     
     return self;
-}
-
-- (void) connect {
-    NSLog(@"Connecting to %@", self.ip);
 }
 
 @end
