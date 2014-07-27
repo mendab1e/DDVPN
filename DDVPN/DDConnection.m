@@ -8,18 +8,15 @@
 
 #import "DDConnection.h"
 
+@interface DDConnection()
+
+@property (nonatomic) NSString *title;
+@property (nonatomic) NSString *ip;
+
+@end
+
+
 @implementation DDConnection
-
-@synthesize title = _title;
-@synthesize ip = _ip;
-
-- (NSString*) title {
-    return _title;
-}
-
-- (NSString*) ip {
-    return _ip;
-}
 
 - (id) initWithTitleString: (NSString *) title andIpString:(NSString*) ip {
     self = [super init];

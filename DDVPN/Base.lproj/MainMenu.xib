@@ -650,6 +650,7 @@
             <connections>
                 <outlet property="ipTextBox" destination="CEI-FK-rdd" id="Sg8-qW-TCW"/>
                 <outlet property="menu" destination="QAT-Cx-zC7" id="iKI-XF-rxp"/>
+                <outlet property="tableView" destination="X6z-Eb-tOF" id="1Ov-Fu-DEp"/>
                 <outlet property="titleTextBox" destination="6Dt-Kg-Fbk" id="be5-CG-bLq"/>
             </connections>
         </customObject>
@@ -699,7 +700,7 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
-                                        <tableColumn width="109" minWidth="40" maxWidth="1000" id="KVT-fQ-Nqc">
+                                        <tableColumn identifier="title" width="109" minWidth="40" maxWidth="1000" id="KVT-fQ-Nqc">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Title">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -712,7 +713,7 @@
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         </tableColumn>
-                                        <tableColumn width="123" minWidth="40" maxWidth="1000" id="avd-5R-Vjs">
+                                        <tableColumn identifier="ip" width="123" minWidth="40" maxWidth="1000" id="avd-5R-Vjs">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="ip">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>

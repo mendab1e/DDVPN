@@ -20,4 +20,6 @@
 @property (weak) IBOutlet NSTextField *titleTextBox;
 @property (weak) IBOutlet NSTextField *ipTextBox;
 
+@property (weak) IBOutlet NSTableView *tableView;
+
 @end

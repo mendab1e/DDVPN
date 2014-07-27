@@ -7,18 +7,29 @@
 //
 
 #import "AppDelegate.h"
+#import "DDConnection.h"
+
+
+@interface AppDelegate() <NSTableViewDataSource, NSTableViewDelegate>
+@property (strong, nonatomic) NSMutableArray *connectionsList;
+@end
+
 
 @implementation AppDelegate
 
 @synthesize titleTextBox;
 @synthesize ipTextBox;
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     
     [statusItem setTitle:@"VPN"];
     [statusItem setMenu:menu];
     
+    self.connectionsList = [NSMutableArray array];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
 }
 
 - (IBAction)stopVPN:(id)sender {
@@ -27,8 +38,28 @@
 
 - (IBAction)createConnection:(id)sender {
     NSString *ip = ipTextBox.stringValue;
-    NSLog(@"Connecting ip: %@", ip);
+    NSString *title = titleTextBox.stringValue;
+    DDConnection *connection = [[DDConnection alloc] initWithTitleString:title andIpString:ip];
+    [self.connectionsList addObject:connection];
+    [self.tableView reloadData];
 }
 
+#pragma mark - NSTableViewDataSource NSTableViewDelegate
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
+{
+    return self.connectionsList.count;
+}
+
+-(id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    if ([tableColumn.identifier  isEqual: @"title"]) {
+        return [[self.connectionsList objectAtIndex:row] title];
+    } else if ([tableColumn.identifier  isEqual: @"ip"]) {
+        return [[self.connectionsList objectAtIndex:row] ip];
+    }
+    
+    return nil;
+}
 
 @end

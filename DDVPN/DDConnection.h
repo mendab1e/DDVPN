@@ -10,8 +10,9 @@
 
 @interface DDConnection : NSObject
 
-@property (nonatomic) NSString *title;
-@property (nonatomic) NSString *ip;
+- (NSString *)title;
+- (NSString *)ip;
 
+- (id) initWithTitleString: (NSString *) title andIpString:(NSString*) ip;
 
 @end
