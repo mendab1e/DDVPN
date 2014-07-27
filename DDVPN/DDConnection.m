@@ -19,7 +19,7 @@
 @implementation DDConnection
 
 - (id) initWithTitleString: (NSString *) title
-               andIpString: (NSString*) ip {    
+               andIpString: (NSString *) ip {    
     self = [super init];
     self.title = title;
     self.ip = ip;

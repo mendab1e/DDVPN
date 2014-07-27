@@ -42,24 +42,49 @@
 - (IBAction)createConnection:(id)sender {
     NSString *ip = ipTextBox.stringValue;
     NSString *title = titleTextBox.stringValue;
-    DDConnection *connection = [[DDConnection alloc]
-                                initWithTitleString:title
-                                andIpString:ip];
-    
-    [self.connectionsList addObject:connection];
-    [self.tableView reloadData];
-    
-    NSMenuItem *menuItem = [menu
-                            insertItemWithTitle:title
-                            action:@selector(connectionCallback:)
-                            keyEquivalent:@""
-                            atIndex:0];
-    [menuItem setTarget:self];
+    if ([self searchForConenction:title] == nil) {
+        DDConnection *connection = [[DDConnection alloc]
+                                    initWithTitleString:title
+                                    andIpString:ip];
+        
+        [self.connectionsList addObject:connection];
+        [self.tableView reloadData];
+        
+        NSMenuItem *menuItem = [menu
+                                insertItemWithTitle:title
+                                action:@selector(connectionCallback:)
+                                keyEquivalent:@""
+                                atIndex:0];
+        [menuItem setTarget:self];
+
+    } else {
+        [self showAllert:@"Connection with this title already exists"];
+    }
+}
+
+- (void) showAllert:(NSString *) message {
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:message];
+    [alert runModal];
+    alert = nil;
 }
 
 - (void) connectionCallback:(id)sender {
     NSString *title = ((NSMenuItem *) sender).title;
-    NSLog(@"%@", title);
+    DDConnection *connection = [self searchForConenction:title];
+    if (connection != nil) {
+        [self.rc switchVPN:connection];
+    }
+}
+
+- (DDConnection *) searchForConenction:(NSString *) title {
+    for (DDConnection *connection in self.connectionsList) {
+        if (connection.title == title) {
+            return connection;
+        }
+    }
+    
+    return nil;
 }
 
 #pragma mark - NSTableViewDataSource NSTableViewDelegate
@@ -69,7 +94,8 @@
     return self.connectionsList.count;
 }
 
--(id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+- (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn
+            row:(NSInteger)row
 {
     if ([tableColumn.identifier  isEqual: @"title"]) {
         return [[self.connectionsList objectAtIndex:row] title];
