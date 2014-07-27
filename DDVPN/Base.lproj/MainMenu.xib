@@ -663,14 +663,13 @@
                         <action selector="stopVPN:" target="494" id="Vhp-YA-fL3"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Options" id="iIo-jb-qhr">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                <menuItem isSeparatorItem="YES" id="Kvi-qw-hHm"/>
+                <menuItem title="Options" keyEquivalent="," id="iIo-jb-qhr">
                     <connections>
                         <action selector="orderFront:" target="5xS-OE-8Wl" id="UN5-Wu-UtN"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Quit" id="dDn-Vh-z6z">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                <menuItem title="Quit" keyEquivalent="q" id="dDn-Vh-z6z">
                     <connections>
                         <action selector="terminate:" target="-1" id="FiR-fX-FQs"/>
                     </connections>
@@ -680,14 +679,14 @@
         <window title="DDVPN options" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="5xS-OE-8Wl">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="207" width="480" height="270"/>
+            <rect key="contentRect" x="196" y="207" width="480" height="299"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" id="5CR-5v-7ef">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <rect key="frame" x="0.0" y="0.0" width="480" height="299"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c67-IZ-rHO">
-                        <rect key="frame" x="20" y="26" width="240" height="234"/>
+                        <rect key="frame" x="20" y="55" width="240" height="234"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <clipView key="contentView" ambiguous="YES" misplaced="YES" id="qb4-ii-5wk">
                             <rect key="frame" x="1" y="17" width="238" height="216"/>
@@ -786,14 +785,14 @@
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                     <box autoresizesSubviews="NO" fixedFrame="YES" title="Authentication data" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="1cu-m7-1m4">
-                        <rect key="frame" x="265" y="140" width="198" height="120"/>
+                        <rect key="frame" x="265" y="140" width="198" height="149"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
-                            <rect key="frame" x="1" y="1" width="196" height="104"/>
+                            <rect key="frame" x="1" y="1" width="196" height="133"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Jb-ps-NbZ">
-                                    <rect key="frame" x="18" y="72" width="160" height="22"/>
+                                    <rect key="frame" x="18" y="69" width="160" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="Login" drawsBackground="YES" id="GXX-Wx-xQX">
                                         <font key="font" metaFont="system"/>
@@ -801,8 +800,17 @@
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hGt-oc-lTr">
+                                    <rect key="frame" x="18" y="101" width="160" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="Router ip" drawsBackground="YES" id="UFW-Yb-16r">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
                                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ml-fg-VVW">
-                                    <rect key="frame" x="18" y="40" width="160" height="22"/>
+                                    <rect key="frame" x="18" y="37" width="160" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="Password" drawsBackground="YES" id="1As-tF-e5I">
                                         <font key="font" metaFont="system"/>
@@ -811,7 +819,7 @@
                                     </textFieldCell>
                                 </textField>
                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tcy-kw-fmh">
-                                    <rect key="frame" x="78" y="13" width="40" height="19"/>
+                                    <rect key="frame" x="78" y="10" width="40" height="19"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="roundRect" title="Save" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uhx-n5-PdW">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -823,6 +831,14 @@
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JD2-ft-ZGn">
+                        <rect key="frame" x="31" y="13" width="219" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Remove selected connection" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6Dr-Nn-hw7">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
                 </subviews>
             </view>
         </window>

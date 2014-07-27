@@ -21,8 +21,19 @@
     return self;
 }
 
+- (void) switchVPN:(DDConnection *)newDDConnection {
+    [self connectViaSSH];
+    NSLog(@"Switching VPN to %@", newDDConnection.ip);
+}
+
+- (void) stopVPN {
+    [self connectViaSSH];
+    NSLog(@"Disconnecting from VPN");
+}
+
 - (void) connectViaSSH {
     NSLog(@"Connectiong to %@", self.ip);
 }
+
 
 @end

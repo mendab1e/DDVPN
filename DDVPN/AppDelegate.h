@@ -7,6 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "RouterConnector.h"
+#import "DDConnection.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
     IBOutlet NSMenu *menu;
@@ -19,7 +21,8 @@
 @property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTextField *titleTextBox;
 @property (weak) IBOutlet NSTextField *ipTextBox;
-
 @property (weak) IBOutlet NSTableView *tableView;
+
+@property (strong) RouterConnector *rc;
 
 @end

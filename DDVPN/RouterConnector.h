@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DDConnection.h"
 
 @interface RouterConnector : NSObject
 
@@ -18,5 +19,7 @@
         andLoginString: (NSString *) login
      andPasswordString: (NSString *) password;
 
-- (void)connectViaSSH;
+- (void)switchVPN: (DDConnection *) newDDConnection;
+- (void)stopVPN;
+
 @end

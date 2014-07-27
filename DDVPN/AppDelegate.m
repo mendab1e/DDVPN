@@ -7,8 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "DDConnection.h"
-
 
 @interface AppDelegate() <NSTableViewDataSource, NSTableViewDelegate>
 @property (strong, nonatomic) NSMutableArray *connectionsList;
@@ -22,7 +20,8 @@
 
 - (void)awakeFromNib
 {
-    statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    statusItem = [[NSStatusBar systemStatusBar]
+                  statusItemWithLength:NSVariableStatusItemLength];
     
     [statusItem setTitle:@"VPN"];
     [statusItem setMenu:menu];
@@ -30,18 +29,37 @@
     self.connectionsList = [NSMutableArray array];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.rc = [[RouterConnector alloc]
+               initWithIpString:@"192.168.1.104"
+               andLoginString:@"root"
+               andPasswordString:@"password"];
 }
 
 - (IBAction)stopVPN:(id)sender {
-    NSLog(@"Stopping VNP");
+    [self.rc stopVPN];
 }
 
 - (IBAction)createConnection:(id)sender {
     NSString *ip = ipTextBox.stringValue;
     NSString *title = titleTextBox.stringValue;
-    DDConnection *connection = [[DDConnection alloc] initWithTitleString:title andIpString:ip];
+    DDConnection *connection = [[DDConnection alloc]
+                                initWithTitleString:title
+                                andIpString:ip];
+    
     [self.connectionsList addObject:connection];
     [self.tableView reloadData];
+    
+    NSMenuItem *menuItem = [menu
+                            insertItemWithTitle:title
+                            action:@selector(connectionCallback:)
+                            keyEquivalent:@""
+                            atIndex:0];
+    [menuItem setTarget:self];
+}
+
+- (void) connectionCallback:(id)sender {
+    NSString *title = ((NSMenuItem *) sender).title;
+    NSLog(@"%@", title);
 }
 
 #pragma mark - NSTableViewDataSource NSTableViewDelegate
