@@ -27,4 +27,8 @@
     return self;
 }
 
+- (NSString *) getConnectionString {
+    return [NSString stringWithFormat:@"/tmp/ibvpn/vpn start %@", self.ip];
+}
+
 @end

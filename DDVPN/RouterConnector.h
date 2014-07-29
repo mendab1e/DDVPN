@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "DDConnection.h"
+#import <NMSSH/NMSSH.h>
 
 @interface RouterConnector : NSObject
 

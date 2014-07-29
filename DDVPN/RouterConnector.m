@@ -22,17 +22,57 @@
 }
 
 - (void) switchVPN:(DDConnection *)newDDConnection {
-    [self connectViaSSH];
-    NSLog(@"Switching VPN to %@", newDDConnection.ip);
+    NMSSHSession *session = [self connectViaSSH];
+    NSError *error = nil;
+    NSString *response = [session.channel execute:[newDDConnection getConnectionString]
+                                            error:&error];
+    if (error == nil || error.code == 0) {
+        NSLog(@"VPN is switched to %@. %@", newDDConnection.ip, response);
+    } else {
+        NSString *errorMessage = [NSString stringWithFormat:@"Error: %ld", (long)error.code];
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert setMessageText:errorMessage];
+        [alert runModal];
+        alert = nil;
+    }
+    
+    [session disconnect];
 }
 
 - (void) stopVPN {
     [self connectViaSSH];
-    NSLog(@"Disconnecting from VPN");
+    NMSSHSession *session = [self connectViaSSH];
+    NSError *error = nil;
+    NSString *response = [session.channel execute:@"/tmp/ibvpn/vpn stop"
+                                            error:&error];
+    if (error == nil || error.code == 0) {
+        NSLog(@"Disconnected from VPN. %@", response);
+    } else {
+        NSString *errorMessage = [NSString stringWithFormat:@"Error: %ld", (long)error.code];
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert setMessageText:errorMessage];
+        [alert runModal];
+        alert = nil;
+    }
+    
+    [session disconnect];
 }
 
-- (void) connectViaSSH {
+- (NMSSHSession *) connectViaSSH {
     NSLog(@"Connectiong to %@", self.ip);
+    NMSSHSession *session = [NMSSHSession connectToHost:self.ip
+                                           withUsername:self.login];
+    
+    if (session.isConnected) {
+        [session authenticateByPassword:self.password];
+        
+        if (session.isAuthorized) {
+            NSLog(@"Authentication succeeded");
+            return session;
+        }
+    }
+    
+    return nil;
 }
 
 

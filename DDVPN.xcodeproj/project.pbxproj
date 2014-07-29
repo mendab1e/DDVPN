@@ -1,509 +1,1184 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		D90231DF197EDFCA00E95F3A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D90231DE197EDFCA00E95F3A /* Cocoa.framework */; };
-		D90231E9197EDFCA00E95F3A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D90231E7197EDFCA00E95F3A /* InfoPlist.strings */; };
-		D90231EB197EDFCA00E95F3A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D90231EA197EDFCA00E95F3A /* main.m */; };
-		D90231EF197EDFCA00E95F3A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D90231ED197EDFCA00E95F3A /* Credits.rtf */; };
-		D90231F2197EDFCA00E95F3A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D90231F1197EDFCA00E95F3A /* AppDelegate.m */; };
-		D90231F5197EDFCA00E95F3A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90231F3197EDFCA00E95F3A /* MainMenu.xib */; };
-		D90231F7197EDFCA00E95F3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D90231F6197EDFCA00E95F3A /* Images.xcassets */; };
-		D90231FE197EDFCA00E95F3A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D90231FD197EDFCA00E95F3A /* XCTest.framework */; };
-		D90231FF197EDFCA00E95F3A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D90231DE197EDFCA00E95F3A /* Cocoa.framework */; };
-		D9023207197EDFCA00E95F3A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9023205197EDFCA00E95F3A /* InfoPlist.strings */; };
-		D9023209197EDFCA00E95F3A /* DDVPNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9023208197EDFCA00E95F3A /* DDVPNTests.m */; };
-		D9023214197EF91200E95F3A /* DDConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D9023213197EF91200E95F3A /* DDConnection.m */; };
-		D907A5B41985267800867EEE /* RouterConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = D907A5B31985267800867EEE /* RouterConnector.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D9023200197EDFCA00E95F3A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D90231D3197EDFCA00E95F3A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D90231DA197EDFCA00E95F3A;
-			remoteInfo = DDVPN;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		D90231DB197EDFCA00E95F3A /* DDVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D90231DE197EDFCA00E95F3A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		D90231E1197EDFCA00E95F3A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		D90231E2197EDFCA00E95F3A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		D90231E3197EDFCA00E95F3A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D90231E6197EDFCA00E95F3A /* DDVPN-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DDVPN-Info.plist"; sourceTree = "<group>"; };
-		D90231E8197EDFCA00E95F3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D90231EA197EDFCA00E95F3A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D90231EC197EDFCA00E95F3A /* DDVPN-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DDVPN-Prefix.pch"; sourceTree = "<group>"; };
-		D90231EE197EDFCA00E95F3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		D90231F0197EDFCA00E95F3A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D90231F1197EDFCA00E95F3A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D90231F4197EDFCA00E95F3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		D90231F6197EDFCA00E95F3A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D90231FC197EDFCA00E95F3A /* DDVPNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDVPNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D90231FD197EDFCA00E95F3A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		D9023204197EDFCA00E95F3A /* DDVPNTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DDVPNTests-Info.plist"; sourceTree = "<group>"; };
-		D9023206197EDFCA00E95F3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D9023208197EDFCA00E95F3A /* DDVPNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDVPNTests.m; sourceTree = "<group>"; };
-		D9023212197EF91200E95F3A /* DDConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDConnection.h; sourceTree = "<group>"; };
-		D9023213197EF91200E95F3A /* DDConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDConnection.m; sourceTree = "<group>"; };
-		D907A5B21985267800867EEE /* RouterConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouterConnector.h; sourceTree = "<group>"; };
-		D907A5B31985267800867EEE /* RouterConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouterConnector.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		D90231D8197EDFCA00E95F3A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D90231DF197EDFCA00E95F3A /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D90231F9197EDFCA00E95F3A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D90231FF197EDFCA00E95F3A /* Cocoa.framework in Frameworks */,
-				D90231FE197EDFCA00E95F3A /* XCTest.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		D90231D2197EDFC900E95F3A = {
-			isa = PBXGroup;
-			children = (
-				D90231E4197EDFCA00E95F3A /* DDVPN */,
-				D9023202197EDFCA00E95F3A /* DDVPNTests */,
-				D90231DD197EDFCA00E95F3A /* Frameworks */,
-				D90231DC197EDFCA00E95F3A /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		D90231DC197EDFCA00E95F3A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D90231DB197EDFCA00E95F3A /* DDVPN.app */,
-				D90231FC197EDFCA00E95F3A /* DDVPNTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		D90231DD197EDFCA00E95F3A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D90231DE197EDFCA00E95F3A /* Cocoa.framework */,
-				D90231FD197EDFCA00E95F3A /* XCTest.framework */,
-				D90231E0197EDFCA00E95F3A /* Other Frameworks */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D90231E0197EDFCA00E95F3A /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D90231E1197EDFCA00E95F3A /* AppKit.framework */,
-				D90231E2197EDFCA00E95F3A /* CoreData.framework */,
-				D90231E3197EDFCA00E95F3A /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		D90231E4197EDFCA00E95F3A /* DDVPN */ = {
-			isa = PBXGroup;
-			children = (
-				D90231F0197EDFCA00E95F3A /* AppDelegate.h */,
-				D90231F1197EDFCA00E95F3A /* AppDelegate.m */,
-				D90231F3197EDFCA00E95F3A /* MainMenu.xib */,
-				D90231F6197EDFCA00E95F3A /* Images.xcassets */,
-				D90231E5197EDFCA00E95F3A /* Supporting Files */,
-				D907A5B11985255800867EEE /* DDConnection */,
-				D907A5B51985267E00867EEE /* RouterConnector */,
-			);
-			path = DDVPN;
-			sourceTree = "<group>";
-		};
-		D90231E5197EDFCA00E95F3A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D90231E6197EDFCA00E95F3A /* DDVPN-Info.plist */,
-				D90231E7197EDFCA00E95F3A /* InfoPlist.strings */,
-				D90231EA197EDFCA00E95F3A /* main.m */,
-				D90231EC197EDFCA00E95F3A /* DDVPN-Prefix.pch */,
-				D90231ED197EDFCA00E95F3A /* Credits.rtf */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D9023202197EDFCA00E95F3A /* DDVPNTests */ = {
-			isa = PBXGroup;
-			children = (
-				D9023208197EDFCA00E95F3A /* DDVPNTests.m */,
-				D9023203197EDFCA00E95F3A /* Supporting Files */,
-			);
-			path = DDVPNTests;
-			sourceTree = "<group>";
-		};
-		D9023203197EDFCA00E95F3A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D9023204197EDFCA00E95F3A /* DDVPNTests-Info.plist */,
-				D9023205197EDFCA00E95F3A /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D907A5B11985255800867EEE /* DDConnection */ = {
-			isa = PBXGroup;
-			children = (
-				D9023212197EF91200E95F3A /* DDConnection.h */,
-				D9023213197EF91200E95F3A /* DDConnection.m */,
-			);
-			name = DDConnection;
-			sourceTree = "<group>";
-		};
-		D907A5B51985267E00867EEE /* RouterConnector */ = {
-			isa = PBXGroup;
-			children = (
-				D907A5B21985267800867EEE /* RouterConnector.h */,
-				D907A5B31985267800867EEE /* RouterConnector.m */,
-			);
-			name = RouterConnector;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		D90231DA197EDFCA00E95F3A /* DDVPN */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D902320C197EDFCA00E95F3A /* Build configuration list for PBXNativeTarget "DDVPN" */;
-			buildPhases = (
-				D90231D7197EDFCA00E95F3A /* Sources */,
-				D90231D8197EDFCA00E95F3A /* Frameworks */,
-				D90231D9197EDFCA00E95F3A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DDVPN;
-			productName = DDVPN;
-			productReference = D90231DB197EDFCA00E95F3A /* DDVPN.app */;
-			productType = "com.apple.product-type.application";
-		};
-		D90231FB197EDFCA00E95F3A /* DDVPNTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D902320F197EDFCA00E95F3A /* Build configuration list for PBXNativeTarget "DDVPNTests" */;
-			buildPhases = (
-				D90231F8197EDFCA00E95F3A /* Sources */,
-				D90231F9197EDFCA00E95F3A /* Frameworks */,
-				D90231FA197EDFCA00E95F3A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D9023201197EDFCA00E95F3A /* PBXTargetDependency */,
-			);
-			name = DDVPNTests;
-			productName = DDVPNTests;
-			productReference = D90231FC197EDFCA00E95F3A /* DDVPNTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		D90231D3197EDFCA00E95F3A /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "Timur Yanberdin";
-				TargetAttributes = {
-					D90231FB197EDFCA00E95F3A = {
-						TestTargetID = D90231DA197EDFCA00E95F3A;
-					};
-				};
-			};
-			buildConfigurationList = D90231D6197EDFCA00E95F3A /* Build configuration list for PBXProject "DDVPN" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = D90231D2197EDFC900E95F3A;
-			productRefGroup = D90231DC197EDFCA00E95F3A /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				D90231DA197EDFCA00E95F3A /* DDVPN */,
-				D90231FB197EDFCA00E95F3A /* DDVPNTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		D90231D9197EDFCA00E95F3A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D90231E9197EDFCA00E95F3A /* InfoPlist.strings in Resources */,
-				D90231F7197EDFCA00E95F3A /* Images.xcassets in Resources */,
-				D90231EF197EDFCA00E95F3A /* Credits.rtf in Resources */,
-				D90231F5197EDFCA00E95F3A /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D90231FA197EDFCA00E95F3A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D9023207197EDFCA00E95F3A /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		D90231D7197EDFCA00E95F3A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D907A5B41985267800867EEE /* RouterConnector.m in Sources */,
-				D90231F2197EDFCA00E95F3A /* AppDelegate.m in Sources */,
-				D90231EB197EDFCA00E95F3A /* main.m in Sources */,
-				D9023214197EF91200E95F3A /* DDConnection.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D90231F8197EDFCA00E95F3A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D9023209197EDFCA00E95F3A /* DDVPNTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D9023201197EDFCA00E95F3A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D90231DA197EDFCA00E95F3A /* DDVPN */;
-			targetProxy = D9023200197EDFCA00E95F3A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		D90231E7197EDFCA00E95F3A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D90231E8197EDFCA00E95F3A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		D90231ED197EDFCA00E95F3A /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D90231EE197EDFCA00E95F3A /* en */,
-			);
-			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		D90231F3197EDFCA00E95F3A /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D90231F4197EDFCA00E95F3A /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		D9023205197EDFCA00E95F3A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D9023206197EDFCA00E95F3A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		D902320A197EDFCA00E95F3A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		D902320B197EDFCA00E95F3A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		D902320D197EDFCA00E95F3A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DDVPN/DDVPN-Prefix.pch";
-				INFOPLIST_FILE = "DDVPN/DDVPN-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		D902320E197EDFCA00E95F3A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DDVPN/DDVPN-Prefix.pch";
-				INFOPLIST_FILE = "DDVPN/DDVPN-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		D9023210197EDFCA00E95F3A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DDVPN.app/Contents/MacOS/DDVPN";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DDVPN/DDVPN-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "DDVPNTests/DDVPNTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		D9023211197EDFCA00E95F3A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DDVPN.app/Contents/MacOS/DDVPN";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DDVPN/DDVPN-Prefix.pch";
-				INFOPLIST_FILE = "DDVPNTests/DDVPNTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		D90231D6197EDFCA00E95F3A /* Build configuration list for PBXProject "DDVPN" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D902320A197EDFCA00E95F3A /* Debug */,
-				D902320B197EDFCA00E95F3A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D902320C197EDFCA00E95F3A /* Build configuration list for PBXNativeTarget "DDVPN" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D902320D197EDFCA00E95F3A /* Debug */,
-				D902320E197EDFCA00E95F3A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D902320F197EDFCA00E95F3A /* Build configuration list for PBXNativeTarget "DDVPNTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D9023210197EDFCA00E95F3A /* Debug */,
-				D9023211197EDFCA00E95F3A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = D90231D3197EDFCA00E95F3A /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>05D20C3886F243959BED1DAA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A6190E1DD8E5420894C2A559</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>50B1EC9B4FBB4CDE9659BCAB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>58BA5131EDCB4084B2C4E7F2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-DDVPN.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods-DDVPN.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A6190E1DD8E5420894C2A559</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-DDVPN.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>C9985CCCA7FC4A9D865573D1</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-DDVPN-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>D90231D2197EDFC900E95F3A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D90231E4197EDFCA00E95F3A</string>
+				<string>D9023202197EDFCA00E95F3A</string>
+				<string>D90231DD197EDFCA00E95F3A</string>
+				<string>D90231DC197EDFCA00E95F3A</string>
+				<string>58BA5131EDCB4084B2C4E7F2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D90231D3197EDFCA00E95F3A</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0500</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Timur Yanberdin</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>D90231FB197EDFCA00E95F3A</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>D90231DA197EDFCA00E95F3A</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>D90231D6197EDFCA00E95F3A</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>D90231D2197EDFC900E95F3A</string>
+			<key>productRefGroup</key>
+			<string>D90231DC197EDFCA00E95F3A</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>D90231DA197EDFCA00E95F3A</string>
+				<string>D90231FB197EDFCA00E95F3A</string>
+			</array>
+		</dict>
+		<key>D90231D6197EDFCA00E95F3A</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D902320A197EDFCA00E95F3A</string>
+				<string>D902320B197EDFCA00E95F3A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>D90231D7197EDFCA00E95F3A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D907A5B41985267800867EEE</string>
+				<string>D90231F2197EDFCA00E95F3A</string>
+				<string>D90231EB197EDFCA00E95F3A</string>
+				<string>D9023214197EF91200E95F3A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D90231D8197EDFCA00E95F3A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D90231DF197EDFCA00E95F3A</string>
+				<string>05D20C3886F243959BED1DAA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D90231D9197EDFCA00E95F3A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D90231E9197EDFCA00E95F3A</string>
+				<string>D90231F7197EDFCA00E95F3A</string>
+				<string>D90231EF197EDFCA00E95F3A</string>
+				<string>D90231F5197EDFCA00E95F3A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D90231DA197EDFCA00E95F3A</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>D902320C197EDFCA00E95F3A</string>
+			<key>buildPhases</key>
+			<array>
+				<string>50B1EC9B4FBB4CDE9659BCAB</string>
+				<string>D90231D7197EDFCA00E95F3A</string>
+				<string>D90231D8197EDFCA00E95F3A</string>
+				<string>D90231D9197EDFCA00E95F3A</string>
+				<string>C9985CCCA7FC4A9D865573D1</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>DDVPN</string>
+			<key>productName</key>
+			<string>DDVPN</string>
+			<key>productReference</key>
+			<string>D90231DB197EDFCA00E95F3A</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>D90231DB197EDFCA00E95F3A</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>DDVPN.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>D90231DC197EDFCA00E95F3A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D90231DB197EDFCA00E95F3A</string>
+				<string>D90231FC197EDFCA00E95F3A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D90231DD197EDFCA00E95F3A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D90231DE197EDFCA00E95F3A</string>
+				<string>D90231FD197EDFCA00E95F3A</string>
+				<string>D90231E0197EDFCA00E95F3A</string>
+				<string>A6190E1DD8E5420894C2A559</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D90231DE197EDFCA00E95F3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Cocoa.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Cocoa.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>D90231DF197EDFCA00E95F3A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D90231DE197EDFCA00E95F3A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D90231E0197EDFCA00E95F3A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D90231E1197EDFCA00E95F3A</string>
+				<string>D90231E2197EDFCA00E95F3A</string>
+				<string>D90231E3197EDFCA00E95F3A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Other Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D90231E1197EDFCA00E95F3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AppKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/AppKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>D90231E2197EDFCA00E95F3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreData.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreData.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>D90231E3197EDFCA00E95F3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>D90231E4197EDFCA00E95F3A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D90231F0197EDFCA00E95F3A</string>
+				<string>D90231F1197EDFCA00E95F3A</string>
+				<string>D90231F3197EDFCA00E95F3A</string>
+				<string>D90231F6197EDFCA00E95F3A</string>
+				<string>D90231E5197EDFCA00E95F3A</string>
+				<string>D907A5B11985255800867EEE</string>
+				<string>D907A5B51985267E00867EEE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>DDVPN</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D90231E5197EDFCA00E95F3A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D90231E6197EDFCA00E95F3A</string>
+				<string>D90231E7197EDFCA00E95F3A</string>
+				<string>D90231EA197EDFCA00E95F3A</string>
+				<string>D90231EC197EDFCA00E95F3A</string>
+				<string>D90231ED197EDFCA00E95F3A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D90231E6197EDFCA00E95F3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>DDVPN-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D90231E7197EDFCA00E95F3A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D90231E8197EDFCA00E95F3A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D90231E8197EDFCA00E95F3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D90231E9197EDFCA00E95F3A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D90231E7197EDFCA00E95F3A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D90231EA197EDFCA00E95F3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D90231EB197EDFCA00E95F3A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D90231EA197EDFCA00E95F3A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D90231EC197EDFCA00E95F3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DDVPN-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D90231ED197EDFCA00E95F3A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D90231EE197EDFCA00E95F3A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Credits.rtf</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D90231EE197EDFCA00E95F3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.rtf</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/Credits.rtf</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D90231EF197EDFCA00E95F3A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D90231ED197EDFCA00E95F3A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D90231F0197EDFCA00E95F3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D90231F1197EDFCA00E95F3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D90231F2197EDFCA00E95F3A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D90231F1197EDFCA00E95F3A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D90231F3197EDFCA00E95F3A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D90231F4197EDFCA00E95F3A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MainMenu.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D90231F4197EDFCA00E95F3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/MainMenu.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D90231F5197EDFCA00E95F3A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D90231F3197EDFCA00E95F3A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D90231F6197EDFCA00E95F3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D90231F7197EDFCA00E95F3A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D90231F6197EDFCA00E95F3A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D90231F8197EDFCA00E95F3A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D9023209197EDFCA00E95F3A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D90231F9197EDFCA00E95F3A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D90231FF197EDFCA00E95F3A</string>
+				<string>D90231FE197EDFCA00E95F3A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D90231FA197EDFCA00E95F3A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D9023207197EDFCA00E95F3A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D90231FB197EDFCA00E95F3A</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>D902320F197EDFCA00E95F3A</string>
+			<key>buildPhases</key>
+			<array>
+				<string>D90231F8197EDFCA00E95F3A</string>
+				<string>D90231F9197EDFCA00E95F3A</string>
+				<string>D90231FA197EDFCA00E95F3A</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>D9023201197EDFCA00E95F3A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>DDVPNTests</string>
+			<key>productName</key>
+			<string>DDVPNTests</string>
+			<key>productReference</key>
+			<string>D90231FC197EDFCA00E95F3A</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>D90231FC197EDFCA00E95F3A</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>DDVPNTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>D90231FD197EDFCA00E95F3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>D90231FE197EDFCA00E95F3A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D90231FD197EDFCA00E95F3A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D90231FF197EDFCA00E95F3A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D90231DE197EDFCA00E95F3A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D9023200197EDFCA00E95F3A</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D90231D3197EDFCA00E95F3A</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>D90231DA197EDFCA00E95F3A</string>
+			<key>remoteInfo</key>
+			<string>DDVPN</string>
+		</dict>
+		<key>D9023201197EDFCA00E95F3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>D90231DA197EDFCA00E95F3A</string>
+			<key>targetProxy</key>
+			<string>D9023200197EDFCA00E95F3A</string>
+		</dict>
+		<key>D9023202197EDFCA00E95F3A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D9023208197EDFCA00E95F3A</string>
+				<string>D9023203197EDFCA00E95F3A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>DDVPNTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D9023203197EDFCA00E95F3A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D9023204197EDFCA00E95F3A</string>
+				<string>D9023205197EDFCA00E95F3A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D9023204197EDFCA00E95F3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>DDVPNTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D9023205197EDFCA00E95F3A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D9023206197EDFCA00E95F3A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D9023206197EDFCA00E95F3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D9023207197EDFCA00E95F3A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D9023205197EDFCA00E95F3A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D9023208197EDFCA00E95F3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>DDVPNTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D9023209197EDFCA00E95F3A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D9023208197EDFCA00E95F3A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D902320A197EDFCA00E95F3A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.9</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>D902320B197EDFCA00E95F3A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.9</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>D902320C197EDFCA00E95F3A</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D902320D197EDFCA00E95F3A</string>
+				<string>D902320E197EDFCA00E95F3A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>D902320D197EDFCA00E95F3A</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>58BA5131EDCB4084B2C4E7F2</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>DDVPN/DDVPN-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>DDVPN/DDVPN-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>D902320E197EDFCA00E95F3A</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>58BA5131EDCB4084B2C4E7F2</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>DDVPN/DDVPN-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>DDVPN/DDVPN-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>D902320F197EDFCA00E95F3A</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D9023210197EDFCA00E95F3A</string>
+				<string>D9023211197EDFCA00E95F3A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>D9023210197EDFCA00E95F3A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/DDVPN.app/Contents/MacOS/DDVPN</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>DDVPN/DDVPN-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>DDVPNTests/DDVPNTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>D9023211197EDFCA00E95F3A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/DDVPN.app/Contents/MacOS/DDVPN</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>DDVPN/DDVPN-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>DDVPNTests/DDVPNTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>D9023212197EF91200E95F3A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DDConnection.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D9023213197EF91200E95F3A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>DDConnection.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D9023214197EF91200E95F3A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D9023213197EF91200E95F3A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D907A5B11985255800867EEE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D9023212197EF91200E95F3A</string>
+				<string>D9023213197EF91200E95F3A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>DDConnection</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D907A5B21985267800867EEE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>RouterConnector.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D907A5B31985267800867EEE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>RouterConnector.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D907A5B41985267800867EEE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D907A5B31985267800867EEE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D907A5B51985267E00867EEE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D907A5B21985267800867EEE</string>
+				<string>D907A5B31985267800867EEE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>RouterConnector</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>D90231D3197EDFCA00E95F3A</string>
+</dict>
+</plist>

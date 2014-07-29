@@ -30,9 +30,9 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.rc = [[RouterConnector alloc]
-               initWithIpString:@"192.168.1.104"
+               initWithIpString:@"192.168.1.1"
                andLoginString:@"root"
-               andPasswordString:@"password"];
+               andPasswordString:@"testpass"];
 }
 
 - (IBAction)stopVPN:(id)sender {
@@ -58,15 +58,11 @@
         [menuItem setTarget:self];
 
     } else {
-        [self showAllert:@"Connection with this title already exists"];
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert setMessageText:@"Connection with this title already exists"];
+        [alert runModal];
+        alert = nil;
     }
-}
-
-- (void) showAllert:(NSString *) message {
-    NSAlert *alert = [[NSAlert alloc] init];
-    [alert setMessageText:message];
-    [alert runModal];
-    alert = nil;
 }
 
 - (void) connectionCallback:(id)sender {
