@@ -56,7 +56,10 @@
                                 keyEquivalent:@""
                                 atIndex:0];
         [menuItem setTarget:self];
-
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *filepath = [documentsDirectory stringByAppendingPathComponent:@"ddconfig.plist"];
+        BOOL result = [NSKeyedArchiver archiveRootObject:self.connectionsList toFile:filepath];
     } else {
         NSAlert *alert = [[NSAlert alloc] init];
         [alert setMessageText:@"Connection with this title already exists"];

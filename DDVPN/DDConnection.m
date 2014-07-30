@@ -8,7 +8,7 @@
 
 #import "DDConnection.h"
 
-@interface DDConnection()
+@interface DDConnection() <NSCoding>
 
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *ip;
@@ -30,5 +30,21 @@
 - (NSString *) getConnectionString {
     return [NSString stringWithFormat:@"/tmp/ibvpn/vpn start %@", self.ip];
 }
+
+#pragma mark NSCoding Protocol
+
+- (void)encodeWithCoder:(NSCoder *) encoder {
+    [encoder encodeObject:[self title] forKey:@"title"];
+    [encoder encodeObject:[self ip] forKey:@"ip"];
+}
+
+- (id)initWithCoder:(NSCoder *) decoder {
+    self = [super init];
+    self.title = [decoder decodeObjectForKey:@"title"];
+    self.ip = [decoder decodeObjectForKey:@"ip"];
+    
+    return self;
+}
+
 
 @end
