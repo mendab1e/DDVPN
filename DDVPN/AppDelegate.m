@@ -42,32 +42,44 @@
 - (IBAction)createConnection:(id)sender {
     NSString *ip = ipTextBox.stringValue;
     NSString *title = titleTextBox.stringValue;
+    
     if ([self searchForConenction:title] == nil) {
         DDConnection *connection = [[DDConnection alloc]
                                     initWithTitleString:title
                                     andIpString:ip];
-        
         [self.connectionsList addObject:connection];
         [self.tableView reloadData];
-        
-        NSMenuItem *menuItem = [menu
-                                insertItemWithTitle:title
-                                action:@selector(connectionCallback:)
-                                keyEquivalent:@""
-                                atIndex:0];
-        [menuItem setTarget:self];
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString *filepath = [documentsDirectory stringByAppendingPathComponent:@"ddconfig.plist"];
-        BOOL result = [NSKeyedArchiver archiveRootObject:self.connectionsList toFile:filepath];
+        [self insertConnectionToMenu:title];
+        [self saveConnectionsInFile];
     } else {
-        NSAlert *alert = [[NSAlert alloc] init];
-        [alert setMessageText:@"Connection with this title already exists"];
-        [alert runModal];
-        alert = nil;
+        [self showAllert:@"Connection with this title already exists"];
     }
 }
 
+- (void) showAllert:(NSString *) message {
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:message];
+    [alert runModal];
+    alert = nil;
+}
+
+- (void) insertConnectionToMenu:(NSString *) title {
+    NSMenuItem *menuItem = [menu
+                            insertItemWithTitle:title
+                            action:@selector(connectionCallback:)
+                            keyEquivalent:@""
+                            atIndex:0];
+    [menuItem setTarget:self];
+}
+
+- (void) saveConnectionsInFile {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *filepath = [documentsDirectory stringByAppendingPathComponent:@"ddconfig.plist"];
+    [NSKeyedArchiver archiveRootObject:self.connectionsList toFile:filepath];
+}
+
+// Switch connection on menuitem click
 - (void) connectionCallback:(id)sender {
     NSString *title = ((NSMenuItem *) sender).title;
     DDConnection *connection = [self searchForConenction:title];
