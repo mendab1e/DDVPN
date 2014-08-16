@@ -22,13 +22,13 @@
 {
     statusItem = [[NSStatusBar systemStatusBar]
                   statusItemWithLength:NSVariableStatusItemLength];
-    
     [statusItem setTitle:@"VPN"];
     [statusItem setMenu:menu];
     
-    self.connectionsList = [NSMutableArray array];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    [self initializeConnectionList ];
+    
     self.rc = [[RouterConnector alloc]
                initWithIpString:@"192.168.1.1"
                andLoginString:@"root"
@@ -73,9 +73,7 @@
 }
 
 - (void) saveConnectionsInFile {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *filepath = [documentsDirectory stringByAppendingPathComponent:@"ddconfig.plist"];
+    NSString *filepath = [self getConfigPath];
     [NSKeyedArchiver archiveRootObject:self.connectionsList toFile:filepath];
 }
 
@@ -96,6 +94,32 @@
     }
     
     return nil;
+}
+
+- (void) initializeConnectionList {
+    NSString *filepath = [self getConfigPath];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    if ([fileManager fileExistsAtPath:filepath]) {
+        self.connectionsList = [NSKeyedUnarchiver unarchiveObjectWithFile:filepath];
+        [self insertAllConnectionsToMenu];
+    } else {
+        self.connectionsList = [NSMutableArray array];
+    }
+}
+
+- (void) insertAllConnectionsToMenu {
+    for (DDConnection *connection in self.connectionsList) {
+        [self insertConnectionToMenu:connection.title];
+    }
+}
+
+- (NSString *) getConfigPath {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *filepath = [documentsDirectory stringByAppendingPathComponent:@"ddconfig.plist"];
+    
+    return filepath;
 }
 
 #pragma mark - NSTableViewDataSource NSTableViewDelegate
