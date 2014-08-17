@@ -35,6 +35,17 @@
                andPasswordString:@"testpass"];
 }
 
+- (IBAction)removeConnection:(id)sender {
+    int rowId = (int)[self.tableView selectedRow];
+    if (rowId >= 0) {
+        DDConnection *connection = [self.connectionsList objectAtIndex:rowId];
+        NSString *title = connection.title;
+        [self.connectionsList removeObjectAtIndex:rowId];
+        [self saveConnectionsInFile];
+        [self removeConnectionFromMenu:title];
+    }
+}
+
 - (IBAction)stopVPN:(id)sender {
     [self.rc stopVPN];
 }
@@ -70,6 +81,12 @@
                             keyEquivalent:@""
                             atIndex:0];
     [menuItem setTarget:self];
+}
+
+- (void) removeConnectionFromMenu:(NSString*) title {
+    int menuIndex = (int)[statusItem.menu indexOfItemWithTitle:title];
+    [statusItem.menu removeItemAtIndex:menuIndex];
+    [self.tableView reloadData];
 }
 
 - (void) saveConnectionsInFile {

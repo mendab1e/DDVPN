@@ -17,6 +17,7 @@
 
 - (IBAction)stopVPN:(id)sender;
 - (IBAction)createConnection:(id)sender;
+- (IBAction)removeConnection:(id)sender;
 
 @property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTextField *titleTextBox;

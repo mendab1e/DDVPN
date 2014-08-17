@@ -650,6 +650,7 @@
             <connections>
                 <outlet property="ipTextBox" destination="CEI-FK-rdd" id="Sg8-qW-TCW"/>
                 <outlet property="menu" destination="QAT-Cx-zC7" id="iKI-XF-rxp"/>
+                <outlet property="removeConnection" destination="JD2-ft-ZGn" id="t85-E4-yJs"/>
                 <outlet property="tableView" destination="X6z-Eb-tOF" id="1Ov-Fu-DEp"/>
                 <outlet property="titleTextBox" destination="6Dt-Kg-Fbk" id="be5-CG-bLq"/>
             </connections>
@@ -666,7 +667,7 @@
                 <menuItem isSeparatorItem="YES" id="Kvi-qw-hHm"/>
                 <menuItem title="Options" keyEquivalent="," id="iIo-jb-qhr">
                     <connections>
-                        <action selector="orderFront:" target="5xS-OE-8Wl" id="UN5-Wu-UtN"/>
+                        <action selector="orderFront:" target="5xS-OE-8Wl" id="f3N-If-WHe"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Quit" keyEquivalent="q" id="dDn-Vh-z6z">
@@ -685,7 +686,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="299"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c67-IZ-rHO">
+                    <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c67-IZ-rHO">
                         <rect key="frame" x="20" y="55" width="240" height="234"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <clipView key="contentView" ambiguous="YES" misplaced="YES" id="qb4-ii-5wk">
@@ -731,11 +732,11 @@
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="xpj-ap-gt0">
-                            <rect key="frame" x="1" y="1" width="0.0" height="16"/>
+                            <rect key="frame" x="-100" y="-100" width="0.0" height="16"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="OWf-NB-QxA">
-                            <rect key="frame" x="-15" y="17" width="16" height="0.0"/>
+                            <rect key="frame" x="223" y="17" width="16" height="216"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <tableHeaderView key="headerView" id="8Rs-65-9VP">
@@ -837,6 +838,9 @@
                         <buttonCell key="cell" type="push" title="Remove selected connection" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6Dr-Nn-hw7">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
+                            <connections>
+                                <action selector="removeConnection:" target="494" id="W8n-yD-PsE"/>
+                            </connections>
                         </buttonCell>
                     </button>
                 </subviews>
