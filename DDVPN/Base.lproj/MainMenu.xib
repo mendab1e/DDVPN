@@ -651,6 +651,9 @@
                 <outlet property="ipTextBox" destination="CEI-FK-rdd" id="Sg8-qW-TCW"/>
                 <outlet property="menu" destination="QAT-Cx-zC7" id="iKI-XF-rxp"/>
                 <outlet property="removeConnection" destination="JD2-ft-ZGn" id="t85-E4-yJs"/>
+                <outlet property="routerIpTextbox" destination="hGt-oc-lTr" id="UhE-LJ-hgk"/>
+                <outlet property="routerPasswordTextbox" destination="2Ml-fg-VVW" id="k0a-5C-l8p"/>
+                <outlet property="routerUserTextbox" destination="6Jb-ps-NbZ" id="cTs-4I-Dv0"/>
                 <outlet property="tableView" destination="X6z-Eb-tOF" id="1Ov-Fu-DEp"/>
                 <outlet property="titleTextBox" destination="6Dt-Kg-Fbk" id="be5-CG-bLq"/>
             </connections>
@@ -658,13 +661,13 @@
         <customObject id="420" customClass="NSFontManager"/>
         <menu id="QAT-Cx-zC7">
             <items>
+                <menuItem isSeparatorItem="YES" id="Kvi-qw-hHm"/>
                 <menuItem title="Stop" id="UAv-yS-nMU">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="stopVPN:" target="494" id="Vhp-YA-fL3"/>
                     </connections>
                 </menuItem>
-                <menuItem isSeparatorItem="YES" id="Kvi-qw-hHm"/>
                 <menuItem title="Options" keyEquivalent="," id="iIo-jb-qhr">
                     <connections>
                         <action selector="orderFront:" target="5xS-OE-8Wl" id="f3N-If-WHe"/>
@@ -736,7 +739,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="OWf-NB-QxA">
-                            <rect key="frame" x="223" y="17" width="16" height="216"/>
+                            <rect key="frame" x="-15" y="17" width="16" height="0.0"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <tableHeaderView key="headerView" id="8Rs-65-9VP">
@@ -795,7 +798,7 @@
                                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Jb-ps-NbZ">
                                     <rect key="frame" x="18" y="69" width="160" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="Login" drawsBackground="YES" id="GXX-Wx-xQX">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="User" drawsBackground="YES" id="GXX-Wx-xQX">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -826,6 +829,9 @@
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="cellTitle"/>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="saveSettings:" target="494" id="ZwP-Ew-ReU"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </view>

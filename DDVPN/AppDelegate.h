@@ -24,6 +24,10 @@
 @property (weak) IBOutlet NSTextField *ipTextBox;
 @property (weak) IBOutlet NSTableView *tableView;
 
+@property (weak) IBOutlet NSTextField *routerIpTextbox;
+@property (weak) IBOutlet NSTextField *routerUserTextbox;
+@property (weak) IBOutlet NSTextField *routerPasswordTextbox;
+
 @property (strong) RouterConnector *rc;
 
 @end

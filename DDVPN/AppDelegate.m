@@ -29,10 +29,33 @@
     self.tableView.delegate = self;
     [self initializeConnectionList ];
     
+    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
+    NSString *routerIp = [userDef stringForKey:@"routerIp"];
+    NSString *routerUser = [userDef stringForKey:@"routerUser"];
+    NSString *routerPassword = [userDef stringForKey:@"routerPassword"];
+    
     self.rc = [[RouterConnector alloc]
-               initWithIpString:@"192.168.1.1"
-               andLoginString:@"root"
-               andPasswordString:@"testpass"];
+               initWithIpString:routerIp
+               andLoginString:routerUser
+               andPasswordString:routerPassword];
+    
+}
+
+- (IBAction)saveSettings:(id)sender {
+    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
+    
+    NSString *routerIp = self.routerIpTextbox.stringValue;
+    NSString *routerUser = self.routerUserTextbox.stringValue;
+    NSString *routerPassword = self.routerPasswordTextbox.stringValue;
+    
+    [userDef setObject:routerIp forKey:@"routerIp"];
+    [userDef setObject:routerUser forKey:@"routerUser"];
+    [userDef setObject:routerPassword forKey:@"routerPassword"];
+    
+    self.rc = [[RouterConnector alloc]
+               initWithIpString:routerIp
+               andLoginString:routerUser
+               andPasswordString:routerPassword];
 }
 
 - (IBAction)removeConnection:(id)sender {
