@@ -39,15 +39,24 @@
                andLoginString:routerUser
                andPasswordString:routerPassword];
     
+    self.routerIpTextbox.stringValue = routerIp;
+    self.routerPasswordTextbox.stringValue = routerPassword;
+    self.routerUserTextbox.stringValue = routerUser;
 }
 
 - (IBAction)saveSettings:(id)sender {
-    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
-    
     NSString *routerIp = self.routerIpTextbox.stringValue;
     NSString *routerUser = self.routerUserTextbox.stringValue;
     NSString *routerPassword = self.routerPasswordTextbox.stringValue;
     
+    if (routerIp.length == 0 ||
+        routerPassword.length == 0 ||
+        routerUser.length == 0) {
+        [self showAllert:@"Router ip or Password or User is not specified."];
+        return;
+    }
+    
+    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
     [userDef setObject:routerIp forKey:@"routerIp"];
     [userDef setObject:routerUser forKey:@"routerUser"];
     [userDef setObject:routerPassword forKey:@"routerPassword"];
@@ -76,6 +85,11 @@
 - (IBAction)createConnection:(id)sender {
     NSString *ip = ipTextBox.stringValue;
     NSString *title = titleTextBox.stringValue;
+    
+    if (ip.length == 0 || title.length == 0) {
+        [self showAllert:@"Ip or title is not specified."];
+        return;
+    }
     
     if ([self searchForConenction:title] == nil) {
         DDConnection *connection = [[DDConnection alloc]

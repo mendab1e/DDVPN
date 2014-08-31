@@ -26,7 +26,7 @@
 
 @property (weak) IBOutlet NSTextField *routerIpTextbox;
 @property (weak) IBOutlet NSTextField *routerUserTextbox;
-@property (weak) IBOutlet NSTextField *routerPasswordTextbox;
+@property (weak) IBOutlet NSSecureTextField *routerPasswordTextbox;
 
 @property (strong) RouterConnector *rc;
 
