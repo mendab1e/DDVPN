@@ -18,11 +18,13 @@
 - (IBAction)stopVPN:(id)sender;
 - (IBAction)createConnection:(id)sender;
 - (IBAction)removeConnection:(id)sender;
+- (IBAction)switchAutoStart:(id)sender;
 
 @property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTextField *titleTextBox;
 @property (weak) IBOutlet NSTextField *ipTextBox;
 @property (weak) IBOutlet NSTableView *tableView;
+@property (weak) IBOutlet NSButtonCell *autoLaunchCheckBox;
 
 @property (weak) IBOutlet NSTextField *routerIpTextbox;
 @property (weak) IBOutlet NSTextField *routerUserTextbox;

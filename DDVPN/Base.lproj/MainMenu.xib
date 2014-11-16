@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
     </dependencies>
@@ -648,6 +648,7 @@
         </menu>
         <customObject id="494" customClass="AppDelegate">
             <connections>
+                <outlet property="autoLaunchCheckBox" destination="SAn-LA-aAN" id="6Pq-C5-gAg"/>
                 <outlet property="ipTextBox" destination="CEI-FK-rdd" id="Sg8-qW-TCW"/>
                 <outlet property="menu" destination="QAT-Cx-zC7" id="iKI-XF-rxp"/>
                 <outlet property="removeConnection" destination="JD2-ft-ZGn" id="t85-E4-yJs"/>
@@ -683,14 +684,14 @@
         <window title="DDVPN options" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="5xS-OE-8Wl">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="207" width="480" height="299"/>
+            <rect key="contentRect" x="196" y="207" width="480" height="313"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" id="5CR-5v-7ef">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="299"/>
+                <rect key="frame" x="0.0" y="0.0" width="480" height="313"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c67-IZ-rHO">
-                        <rect key="frame" x="20" y="55" width="240" height="234"/>
+                        <rect key="frame" x="20" y="69" width="240" height="234"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <clipView key="contentView" ambiguous="YES" misplaced="YES" id="qb4-ii-5wk">
                             <rect key="frame" x="1" y="17" width="238" height="216"/>
@@ -748,7 +749,7 @@
                         </tableHeaderView>
                     </scrollView>
                     <box autoresizesSubviews="NO" fixedFrame="YES" title="New connection" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="umC-Cs-Woo">
-                        <rect key="frame" x="265" y="16" width="198" height="120"/>
+                        <rect key="frame" x="265" y="30" width="198" height="120"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
                             <rect key="frame" x="1" y="1" width="196" height="104"/>
@@ -789,7 +790,7 @@
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                     <box autoresizesSubviews="NO" fixedFrame="YES" title="Authentication data" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="1cu-m7-1m4">
-                        <rect key="frame" x="265" y="140" width="198" height="149"/>
+                        <rect key="frame" x="265" y="154" width="198" height="149"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
                             <rect key="frame" x="1" y="1" width="196" height="133"/>
@@ -842,7 +843,7 @@
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JD2-ft-ZGn">
-                        <rect key="frame" x="31" y="13" width="219" height="32"/>
+                        <rect key="frame" x="31" y="27" width="219" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Remove selected connection" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6Dr-Nn-hw7">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -851,6 +852,17 @@
                                 <action selector="removeConnection:" target="494" id="W8n-yD-PsE"/>
                             </connections>
                         </buttonCell>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5r2-Yt-r9J">
+                        <rect key="frame" x="18" y="9" width="104" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Start at login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="SAn-LA-aAN">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="switchAutoStart:" target="494" id="Gcc-Wu-yOG"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>

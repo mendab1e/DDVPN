@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LaunchAtLoginController.h"
 
 @interface AppDelegate() <NSTableViewDataSource, NSTableViewDelegate>
 @property (strong, nonatomic) NSMutableArray *connectionsList;
@@ -42,6 +43,13 @@
     self.routerIpTextbox.stringValue = routerIp;
     self.routerPasswordTextbox.stringValue = routerPassword;
     self.routerUserTextbox.stringValue = routerUser;
+    
+    LaunchAtLoginController *launchController = [[LaunchAtLoginController alloc] init];
+    BOOL launch = [launchController launchAtLogin];
+    if (launch) {
+        self.autoLaunchCheckBox.state = 1;
+    }
+
 }
 
 - (IBAction)saveSettings:(id)sender {
@@ -75,6 +83,15 @@
         [self.connectionsList removeObjectAtIndex:rowId];
         [self saveConnectionsInFile];
         [self removeConnectionFromMenu:title];
+    }
+}
+
+- (IBAction)switchAutoStart:(id)sender {
+    LaunchAtLoginController *launchController = [[LaunchAtLoginController alloc] init];
+    if (self.autoLaunchCheckBox.state == 1) {
+        [launchController setLaunchAtLogin:YES];
+    } else {
+        [launchController setLaunchAtLogin:NO];
     }
 }
 
