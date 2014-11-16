@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "RouterConnector.h"
 #import "DDConnection.h"
+#import "LaunchAtLoginController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
     IBOutlet NSMenu *menu;
@@ -19,8 +20,10 @@
 - (IBAction)createConnection:(id)sender;
 - (IBAction)removeConnection:(id)sender;
 - (IBAction)switchAutoStart:(id)sender;
+- (IBAction)activateWindow:(id)sender;
 
 @property (assign) IBOutlet NSWindow *window;
+@property (unsafe_unretained) IBOutlet NSWindow *optionsWindow;
 @property (weak) IBOutlet NSTextField *titleTextBox;
 @property (weak) IBOutlet NSTextField *ipTextBox;
 @property (weak) IBOutlet NSTableView *tableView;

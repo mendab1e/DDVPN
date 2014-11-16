@@ -651,6 +651,7 @@
                 <outlet property="autoLaunchCheckBox" destination="SAn-LA-aAN" id="6Pq-C5-gAg"/>
                 <outlet property="ipTextBox" destination="CEI-FK-rdd" id="Sg8-qW-TCW"/>
                 <outlet property="menu" destination="QAT-Cx-zC7" id="iKI-XF-rxp"/>
+                <outlet property="optionsWindow" destination="5xS-OE-8Wl" id="kDi-99-1mm"/>
                 <outlet property="removeConnection" destination="JD2-ft-ZGn" id="t85-E4-yJs"/>
                 <outlet property="routerIpTextbox" destination="hGt-oc-lTr" id="UhE-LJ-hgk"/>
                 <outlet property="routerPasswordTextbox" destination="NB3-iC-Vv6" id="Mk4-Je-G2l"/>
@@ -671,7 +672,7 @@
                 </menuItem>
                 <menuItem title="Options" keyEquivalent="," id="iIo-jb-qhr">
                     <connections>
-                        <action selector="orderFront:" target="5xS-OE-8Wl" id="f3N-If-WHe"/>
+                        <action selector="activateWindow:" target="494" id="CFj-JZ-v2t"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Quit" keyEquivalent="q" id="dDn-Vh-z6z">

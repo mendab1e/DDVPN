@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "LaunchAtLoginController.h"
 
 @interface AppDelegate() <NSTableViewDataSource, NSTableViewDelegate>
 @property (strong, nonatomic) NSMutableArray *connectionsList;
@@ -93,6 +92,11 @@
     } else {
         [launchController setLaunchAtLogin:NO];
     }
+}
+
+- (IBAction)activateWindow:(id)sender {
+    [NSApp activateIgnoringOtherApps:YES];
+    [[self optionsWindow] makeKeyAndOrderFront:nil];
 }
 
 - (IBAction)stopVPN:(id)sender {
