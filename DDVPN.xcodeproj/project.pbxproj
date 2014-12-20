@@ -22,6 +22,7 @@
 		D9023214197EF91200E95F3A /* DDConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D9023213197EF91200E95F3A /* DDConnection.m */; };
 		D907A5B41985267800867EEE /* RouterConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = D907A5B31985267800867EEE /* RouterConnector.m */; };
 		D9DA2BFD1A18DA46005BB05A /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DA2BFC1A18DA46005BB05A /* LaunchAtLoginController.m */; };
+		D9F23CF71A45F68D0074D21D /* Notifier.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F23CF61A45F68D0074D21D /* Notifier.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		D907A5B31985267800867EEE /* RouterConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouterConnector.m; sourceTree = "<group>"; };
 		D9DA2BFB1A18DA46005BB05A /* LaunchAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAtLoginController.h; sourceTree = "<group>"; };
 		D9DA2BFC1A18DA46005BB05A /* LaunchAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAtLoginController.m; sourceTree = "<group>"; };
+		D9F23CF51A45F68D0074D21D /* Notifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifier.h; sourceTree = "<group>"; };
+		D9F23CF61A45F68D0074D21D /* Notifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notifier.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,7 @@
 				D90231E5197EDFCA00E95F3A /* Supporting Files */,
 				D907A5B11985255800867EEE /* DDConnection */,
 				D907A5B51985267E00867EEE /* RouterConnector */,
+				D9F23CF81A45F69F0074D21D /* Notifier */,
 			);
 			path = DDVPN;
 			sourceTree = "<group>";
@@ -197,6 +201,15 @@
 				D9DA2BFC1A18DA46005BB05A /* LaunchAtLoginController.m */,
 			);
 			name = LaunchAtLoginController;
+			sourceTree = "<group>";
+		};
+		D9F23CF81A45F69F0074D21D /* Notifier */ = {
+			isa = PBXGroup;
+			children = (
+				D9F23CF51A45F68D0074D21D /* Notifier.h */,
+				D9F23CF61A45F68D0074D21D /* Notifier.m */,
+			);
+			name = Notifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D907A5B41985267800867EEE /* RouterConnector.m in Sources */,
+				D9F23CF71A45F68D0074D21D /* Notifier.m in Sources */,
 				D9DA2BFD1A18DA46005BB05A /* LaunchAtLoginController.m in Sources */,
 				D90231F2197EDFCA00E95F3A /* AppDelegate.m in Sources */,
 				D90231EB197EDFCA00E95F3A /* main.m in Sources */,

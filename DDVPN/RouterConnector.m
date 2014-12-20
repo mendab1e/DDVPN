@@ -42,6 +42,8 @@
         alert = nil;
     }
     
+    Notifier *notifier = [Notifier alloc];
+    [notifier notifyOnSwitch:newDDConnection];
     [session disconnect];
 }
 
@@ -67,6 +69,8 @@
         alert = nil;
     }
     
+    Notifier *notifier = [Notifier alloc];
+    [notifier notifyOnStop];
     [session disconnect];
 }
 

@@ -14,7 +14,7 @@
 - (NSString *)ip;
 
 - (id) initWithTitleString: (NSString *) title
-               andIpString: (NSString*) ip;
+               andIpString: (NSString *) ip;
 - (NSString *) getConnectionString;
 
 @end

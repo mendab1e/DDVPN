@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "DDConnection.h"
 #import <NMSSH/NMSSH.h>
+#import "Notifier.h"
 
 @interface RouterConnector : NSObject
 
