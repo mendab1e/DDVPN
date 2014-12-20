@@ -22,6 +22,12 @@
 }
 
 - (void) switchVPN:(DDConnection *)newDDConnection {
+    [NSThread detachNewThreadSelector:@selector(performAsyncSwitch:)
+                             toTarget:self
+                           withObject:newDDConnection];
+}
+
+- (void) performAsyncSwitch:(DDConnection *)newDDConnection {
     NMSSHSession *session = [self connectViaSSH];
     NSError *error = nil;
     NSString *response = [session.channel execute:[newDDConnection getConnectionString]
@@ -40,6 +46,12 @@
 }
 
 - (void) stopVPN {
+    [NSThread detachNewThreadSelector:@selector(performAsyncStop)
+                             toTarget:self
+                           withObject:nil];
+}
+
+- (void) performAsyncStop {
     [self connectViaSSH];
     NMSSHSession *session = [self connectViaSSH];
     NSError *error = nil;
@@ -60,12 +72,10 @@
 
 - (NMSSHSession *) connectViaSSH {
     NSLog(@"Connectiong to %@", self.ip);
-    NMSSHSession *session = [NMSSHSession connectToHost:self.ip
-                                           withUsername:self.login];
-    
+    NMSSHSession *session = [NMSSHSession connectToHost:self.ip withUsername:self.login];
+
     if (session.isConnected) {
         [session authenticateByPassword:self.password];
-        
         if (session.isAuthorized) {
             NSLog(@"Authentication succeeded");
             return session;
