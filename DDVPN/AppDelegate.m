@@ -31,8 +31,19 @@
     
     NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
     NSString *routerIp = [userDef stringForKey:@"routerIp"];
+    if (routerIp == nil) {
+        routerIp = @"";
+    }
+    
     NSString *routerUser = [userDef stringForKey:@"routerUser"];
+    if (routerUser == nil) {
+        routerUser = @"";
+    }
+    
     NSString *routerPassword = [userDef stringForKey:@"routerPassword"];
+    if (routerPassword == nil) {
+        routerPassword = @"";
+    }
     
     self.rc = [[RouterConnector alloc]
                initWithIpString:routerIp
